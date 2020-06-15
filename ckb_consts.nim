@@ -1,6 +1,4 @@
 import strutils
-const sourcePath = currentSourcePath().split({'\\', '/'})[0..^2].join("/")
-const headerckb_consts = sourcePath & "ckb-c-stdlib/ckb_constsh"
 const
   SYS_exit* = 93
   SYS_ckb_load_transaction* = 2051
@@ -25,8 +23,8 @@ const
   CKB_SOURCE_OUTPUT* = 2
   CKB_SOURCE_CELL_DEP* = 3
   CKB_SOURCE_HEADER_DEP* = 4
-  CKB_SOURCE_GROUP_INPUT* = 0x0000000000000000'i64
-  CKB_SOURCE_GROUP_OUTPUT* = 0x0000000000000000'i64
+  CKB_SOURCE_GROUP_INPUT* = 0x0100000000000001
+  CKB_SOURCE_GROUP_OUTPUT* = 0x0100000000000002
   CKB_CELL_FIELD_CAPACITY* = 0
   CKB_CELL_FIELD_DATA_HASH* = 1
   CKB_CELL_FIELD_LOCK* = 2
